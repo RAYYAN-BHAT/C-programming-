@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+void prime(int n)
+{
+    int flag = 0;
+    for(int i = 2;i<n;i++)
+    {
+        if(n % i == 0)
+        {
+            flag = 1;
+        }
+    }
+    if(flag == 1)
+    {
+        printf("Composite. ");
+    }
+    else
+        printf("Prime");
+}
+int main()
+{
+    while(1)
+    {int x;
+
+    int n;
+    printf("\nEnter a number: ");
+    scanf("%d", &n);
+
+    prime(n);
+    printf("\n Press 1 to continue and 0 to exit: ");
+    scanf("%d", &x);
+    if(x == 0)
+    {
+        printf("Goodbye");
+        return 0;
+    }
+
+
+
+
+}
+
+
+}

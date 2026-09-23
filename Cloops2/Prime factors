@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{ int n,i = 2;
+  printf("Enter a number: ");
+  scanf("%d", &n);
+  printf("%d = ", n);
+
+  while(n >= 0)
+  {
+      if(n%i==0)
+      {
+         printf(" %d ", i);
+         n = n/i;
+         if((n-1)> 0)
+         {
+             printf("x");
+         }
+
+      }
+      else
+      {
+          i++;
+      }
+
+  }
+    return 0;
+}

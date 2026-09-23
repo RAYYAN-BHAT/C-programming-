@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[5] = {1,2,3,2,1};
+    int left = 0, right = 4;
+    int flag = 1;
+
+    while(left < right)
+    {
+        if(a[left] != a[right])
+        {
+            flag = 0;
+            break;
+        }
+
+        left++;
+        right--;
+    }
+
+    if(flag)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+
+    return 0;
+}

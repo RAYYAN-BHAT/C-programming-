@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    float n,i = 1, sum = 0 ;
+    printf("Enter a number: ");
+    scanf("%f", &n);
+
+    while( i <= n)
+    {
+        printf("1/%.0f\n", i);
+        i++;
+    }
+    return 0;
+}

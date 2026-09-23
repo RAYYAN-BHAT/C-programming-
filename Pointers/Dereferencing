@@ -1,0 +1,13 @@
+// Dereferencing a pointer to access the value it points to
+#include <stdio.h>
+
+int main() {
+    int value = 42;          // Declare an integer variable
+    int *ptr = &value;      // Declare a pointer and assign it the address of 'value'
+
+    printf("Value: %d\n", value);          // Print the original value
+    printf("Pointer Address: %p\n", (void*)ptr); // Print the address stored in the pointer
+    printf("Dereferenced Value: %d\n", *ptr);   // Dereference the pointer to access the value
+
+    return 0;
+}

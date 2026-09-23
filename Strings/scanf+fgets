@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+// input strings using fgets() and scanf()
+    
+    int age;
+    printf("Enter you age: ");
+    scanf("%d", &age);
+    getchar(); // to consume the newline character left by scanf()
+
+    char name[200];
+    printf("Enter your name: ");
+    fgets(name,200,stdin);
+    name[strcspn(name,"\n" )] = '\0'; // to remove the newline character added by fgets()
+
+    printf(" Student: %s , Age: %d", name, age);
+    return 0;
+}

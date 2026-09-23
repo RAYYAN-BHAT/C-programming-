@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    float n,i = 1, sum = 0,m ;
+    printf("Enter a number: ");
+    scanf("%f", &n);
+
+
+    while( i <= n)
+    {
+    m = 1/i;
+    printf("1/%.0f  ", i );
+    sum = sum + m;
+    if((i+1)<=n)
+    {
+        printf(" + ");
+    }
+
+    i++;
+    }
+    printf(" = %f", sum);
+    return 0;
+}

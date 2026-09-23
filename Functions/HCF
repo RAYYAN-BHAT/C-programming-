@@ -1,0 +1,53 @@
+# include <stdio.h>
+
+int HCF(int a, int b)
+{
+    if(a<b)
+    {
+        for(int i = a;i>0 ;i--)
+        {
+            if(a %i == 0 && b % i == 0)
+                return i;
+        }
+    }
+    else
+    {
+        for(int i = b;i>0;i--)
+        {
+            if(a %i == 0 && b % i == 0)
+                return i;
+        }
+    }
+}
+
+
+
+int main()
+{
+    while(1)
+    {int x;
+
+    int n;
+    printf("\nEnter a number: ");
+    scanf("%d", &n);
+
+    int m;
+    printf("Enter a second number: ");
+    scanf("%d", &m);
+
+    printf("The HCF of %d and %d is %d", n, m , HCF(n,m));
+    printf("\n Press 1 to continue and 0 to exit: ");
+    scanf("%d", &x);
+    if(x == 0)
+    {
+        printf("Goodbye");
+        return 0;
+    }
+
+
+
+
+}
+
+
+}

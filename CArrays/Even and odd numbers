@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+    int arr[n];
+
+    printf("Enter elements of the array: ");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int even = 0,odd = 0;
+    printf("Even numbers are: ");
+  for(int i = 0;i<n;i++)
+  {
+      if(arr[i]%2==0)
+      {
+          printf("%d ", arr[i]);
+          even++;
+      }
+  }
+  printf("\nEven numbers in the array are %d", even);
+  printf("\nOdd numbers are: ");
+  for(int i = 0;i<n;i++)
+  {
+      if(arr[i]%2 !=0)
+      {
+          printf("%d ", arr[i]);
+          odd++;
+      }
+  }
+  printf("\nOdd numbers in the array are %d", odd);
+
+    return 0;
+}

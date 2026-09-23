@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,z;
+    printf("Enter number of terms of Fibonacci sequence you want:  ");
+    scanf("%d", &n);
+    int a = 0;
+    int b = 1;
+    printf("%d\t%d", a, b);
+
+    for(int i = 1; i <= (n-2); i++)
+    {
+        z = a + b;
+        printf("\t%d\t", z);
+         a = b;
+         b = z;
+    }
+    return 0;
+}

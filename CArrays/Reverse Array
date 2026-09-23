@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[5] = {1,2,3,4,5};
+    int left = 0, right = 4, temp;
+
+    while(left < right)
+    {
+        temp = a[left];
+        a[left] = a[right];
+        a[right] = temp;
+
+        left++;
+        right--;
+    }
+
+    for(int i = 0; i < 5; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}

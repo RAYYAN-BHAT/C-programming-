@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+void fib(int n);
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    fib(n);
+    return  0;
+
+}
+void fib(int n)
+{
+    int a = 0, b = 1,x;
+    if(n<=0)
+    {
+        printf("Enter a positive number");
+    }
+     else if(n==1)
+    {
+        printf("%d ",a);
+    }
+     else if(n==2)
+    {
+        printf("%d %d ", a, b);
+    }
+     else
+    {
+        printf("%d %d ", a, b);
+        for(int i = 0;i<n-2;i++)
+        {
+            x = a + b;
+            printf("%d ",x);
+            a = b;
+            b = x;
+        }
+    }
+}

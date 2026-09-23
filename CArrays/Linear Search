@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+    int arr[n];
+
+    printf("Enter elements of the array: ");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+   int x;
+   printf("Enter the element you wanna find: ");
+   scanf("%d", &x);
+
+   for(int j =1 ; j<n;j++)
+   {
+       if(arr[j] == x)
+       {
+
+        printf("The element was found successfully. ");
+        return 0;
+
+       }
+
+   }
+   printf("The Element was not found int the array");
+
+
+    return 0;
+}

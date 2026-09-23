@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+
+    int n, i = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if(n!=0)
+    {while(n != 0)
+    { 
+        n /= 10;
+        i++;
+    }
+    printf("The number of digits in the number is: %d", i);}
+    else
+    {
+        printf("The number of digits in the number is: 1");
+    }
+    return 0;
+}

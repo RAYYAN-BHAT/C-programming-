@@ -1,0 +1,61 @@
+# include <stdio.h>
+void LCM(int a, int b)
+{
+    if(a>b)
+    {
+        for(int i = a;;i++)
+        {
+            if(i%a == 0 && i % b == 0)
+            {
+                printf("%d is the LCM",i);
+                break;
+            }
+
+        }
+    }
+    else
+        {
+        for(int i = a;;i++)
+        {
+            if(i%a == 0 && i % b == 0)
+            {
+                printf("%d is the LCM",i);
+                break;
+            }
+
+        }
+    }
+}
+
+
+
+
+int main()
+{
+    while(1)
+    {int x;
+
+    int n;
+    printf("\nEnter a number: ");
+    scanf("%d", &n);
+
+    int m;
+    printf("Enter a second number: ");
+    scanf("%d", &m);
+
+    LCM(n,m);
+    printf("\n Press 1 to continue and 0 to exit: ");
+    scanf("%d", &x);
+    if(x == 0)
+    {
+        printf("Goodbye");
+        return 0;
+    }
+
+
+
+
+}
+
+
+}

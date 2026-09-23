@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main() {
+    int num, i = 2, isComposite = 0; // The "Flag" starts at 0
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Handling 1 and numbers less than 2
+    if (num < 2) {
+        printf("%d is neither prime nor composite.\n", num);
+        return 0;
+    }
+
+    while (i < num) {
+        if (num % i == 0) {
+            isComposite = 1; // Flip the switch!
+            break;           // No need to check other numbers
+        }
+        i++;
+    }
+
+    // Now we check the state of our switch
+    if (isComposite == 1) {
+        printf("%d is composite\n", num);
+    } else {
+        printf("%d is prime\n", num);
+    }
+
+    return 0;
+}
