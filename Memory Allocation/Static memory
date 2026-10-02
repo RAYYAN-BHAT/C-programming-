@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+// Stack memory allocation
+    // In C, local variables are typically allocated on the stack. This means that when a function is called, the memory for its local variables is allocated on the stack, and when the function returns, that memory is automatically freed.
+
+int function()
+{
+    int z = 30; // Local variable allocated on the stack
+    printf("Value of z: %d\n", z);
+    return 0;
+}
+
+int fun()
+{
+    int y = 20; // Local variable allocated on the stack
+    function(); // Call to another function
+    printf("Value of y: %d\n", y);
+    return 0;
+}
+int main()
+{
+    int x = 10; // Local variable allocated on the stack
+    fun(); // Call to another function
+    printf("Value of x: %d\n", x);
+   
+
+
+   return 0;
+}
