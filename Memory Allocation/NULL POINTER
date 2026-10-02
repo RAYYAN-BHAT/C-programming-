@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    // NULL pointer
+    // A NULL pointer is a pointer that does not point to any valid memory location. It is often used to indicate that the pointer is not currently pointing to any object or data.
+   printf("%p", NULL); //0x0 depending on the system
+
+   int *p;
+   // This pointer is uninitialized and may point to any random memory location. It is important to initialize pointers before using them to avoid undefined behavior.
+   int *ptr = NULL; // Declare a NULL pointer and holds the address of NULL. 
+
+   return 0;
+}
