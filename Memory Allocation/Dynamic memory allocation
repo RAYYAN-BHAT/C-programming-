@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Dynamic memory allocation in C
+// Dynamic memory allocation allows you to allocate memory at runtime using functions like malloc, calloc, realloc, and free. This is useful when the size of the data structure is not known at compile time.
+// You request memory from the heap, and it is your responsibility to free that memory when it is no longer needed to avoid memory leaks.
+// malloc, calloc and these functions live in the stdlib.h header file, so you need to include it in your program.
+
+
+int main()
+{
+    int n;
+    printf("Enter no of elements: ");
+    scanf("%d", &n);
+
+    // Let arr be the array of integers of size n. We will allocate memory for this array dynamically using malloc.
+    // malloc takes the size of memory to be allocated in bytes as an argument. We can calculate the size of memory required for n integers using sizeof(int) * n.
+    // arr is a pointer because malloc returns a pointer to the allocated memory. We need to cast this pointer to the appropriate type, which is int* in this case.
+
+    int *arr = (int *)malloc(n * sizeof(int));
+    if (arr == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+    for(int i = 0; i < n; i++)
+    {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+    free(arr);
+    arr = NULL;
+
+    for(int i = 0; i < n; i++)
+    {
+        printf("Element %d: %d\n", i + 1, arr[i]);
+    }
+    return 0;
+}
